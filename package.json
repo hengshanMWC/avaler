@@ -7,13 +7,13 @@
     "packages/*"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/hengshanMWC/monorepo-template#readme",
+  "homepage": "https://github.com/hengshanMWC/avaler#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hengshanMWC/monorepo-template.git"
+    "url": "git+https://github.com/hengshanMWC/avaler.git"
   },
   "bugs": {
-    "url": "https://github.com/hengshanMWC/monorepo-template/issues"
+    "url": "https://github.com/hengshanMWC/avaler/issues"
   },
   "scripts": {
     "init": "pnpm i && npm run prepare",

@@ -10,7 +10,7 @@ lerna + pnpm = Monorepo，Support the following functions :package:
 # init
 
 ```
-git clone https://github.com/hengshanMWC/monorepo-template.git
+git clone https://github.com/hengshanMWC/avaler.git
 cd item-template
 npm run init
 ```
