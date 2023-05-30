@@ -8,6 +8,8 @@ export interface FieldData {
 export interface Avaler {
   getReqName: () => string
   getMethod: () => string
-  getResBodyFieldDataList: () => FieldData[]
+  getReqBodyFieldDataList: () => FieldData[]
+  getReqQueryFieldDataList: () => FieldData[]
+  getReqParamsFieldDataList: () => FieldData[]
   getResHeadersFieldDataList: () => FieldData[]
 }
