@@ -1,0 +1,22 @@
+{
+  "name": "avaler-typescript",
+  "version": "0.0.1",
+  "description": "数据爬取转换接口",
+  "author": "mawencan",
+  "license": "MIT",
+  "homepage": "https://github.com/hengshanMWC/avaler#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hengshanMWC/avaler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hengshanMWC/avaler/issues"
+  },
+  "main": "dist/index.js",
+  "types": "typings",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "vitest",
+    "test:cov": "vitest --coverage"
+  }
+}
