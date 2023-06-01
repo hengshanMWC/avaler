@@ -1,3 +1,2 @@
-export function demo() {
-  return 'demo'
-}
+export * from './avaler'
+export * from './interface'

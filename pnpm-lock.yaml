@@ -62,7 +62,15 @@ importers:
         specifier: ^5.1.1
         version: 5.1.1(webpack@5.84.1)
 
+  packages/core: {}
+
   packages/demo: {}
+
+  packages/ts:
+    devDependencies:
+      avaler-core:
+        specifier: workspace:^
+        version: link:../core
 
 packages:
 

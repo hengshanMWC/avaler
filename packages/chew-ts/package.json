@@ -1,5 +1,5 @@
 {
-  "name": "avaler-typescript",
+  "name": "avaler-chew-typescript",
   "version": "0.0.1",
   "description": "数据爬取转换接口",
   "author": "mawencan",
@@ -18,5 +18,8 @@
     "build": "webpack --config webpack.config.js",
     "test": "vitest",
     "test:cov": "vitest --coverage"
+  },
+  "devDependencies": {
+    "avaler-core": "workspace:^"
   }
 }

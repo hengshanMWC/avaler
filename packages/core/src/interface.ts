@@ -1,5 +1,5 @@
 export interface FieldData {
-  key: string
+  key?: string
   value: string
   description?: string
   isMandatory: boolean
@@ -9,6 +9,9 @@ export interface FieldData {
 export interface Swallow<T = any> {
   setData: (data: T) => this
   getApiUrl: () => string
+  getApiName: () => string
+  getApiTitle: () => string
+  getApiDescribe: () => string
   getMethod: () => string
   getReqBodyFieldDataList: () => FieldData[]
   getReqQueryFieldDataList: () => FieldData[]
@@ -18,11 +21,11 @@ export interface Swallow<T = any> {
 }
 
 export interface Chew {
-  formatReqBody: (data: FieldData[], swallow: Swallow) => string
-  formatReqQuery: (data: FieldData[], swallow: Swallow) => string
-  formatReqParams: (data: FieldData[], swallow: Swallow) => string
-  formatResBody: (data: FieldData[], swallow: Swallow) => string
-  formatResHeaders: (data: FieldData[], swallow: Swallow) => string
+  formatReqBody: (list: FieldData[], apiName: string) => string
+  formatReqQuery: (list: FieldData[], apiName: string) => string
+  formatReqParams: (list: FieldData[], apiName: string) => string
+  formatResBody: (list: FieldData[], apiName: string) => string
+  formatResHeaders: (list: FieldData[], apiName: string) => string
 }
 
 export interface Vomit {
