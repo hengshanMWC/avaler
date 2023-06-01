@@ -29,11 +29,11 @@ export interface Chew {
 }
 
 export interface Vomit {
-  outputReqBody: (data: string) => this
-  outputReqQuery: (data: string) => this
-  outputReqParams: (data: string) => this
-  outputResBody: (data: string) => this
-  outputResHeaders: (data: string) => this
+  outputReqBody: (data: string, swallow: Swallow) => this
+  outputReqQuery: (data: string, swallow: Swallow) => this
+  outputReqParams: (data: string, swallow: Swallow) => this
+  outputResBody: (data: string, swallow: Swallow) => this
+  outputResHeaders: (data: string, swallow: Swallow) => this
 }
 
 // export interface DataMap {

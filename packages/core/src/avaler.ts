@@ -18,35 +18,44 @@ export class Avaler<S = any> {
   writeReqBody() {
     const fieldDataList = this.swallow.getReqBodyFieldDataList()
     const formatData = this.chew.formatReqBody(fieldDataList, this.swallow.getApiName())
-    this.vomit.outputReqBody(formatData)
+    this.vomit.outputReqBody(formatData, this.swallow)
     return this
   }
 
   writeReqQuery() {
     const fieldDataList = this.swallow.getReqQueryFieldDataList()
     const formatData = this.chew.formatReqQuery(fieldDataList, this.swallow.getApiName())
-    this.vomit.outputReqQuery(formatData)
+    this.vomit.outputReqQuery(formatData, this.swallow)
     return this
   }
 
   writeReqParams() {
     const fieldDataList = this.swallow.getReqParamsFieldDataList()
     const formatData = this.chew.formatReqParams(fieldDataList, this.swallow.getApiName())
-    this.vomit.outputReqParams(formatData)
+    this.vomit.outputReqParams(formatData, this.swallow)
     return this
   }
 
   writeResBody() {
     const fieldDataList = this.swallow.getResBodyFieldDataList()
     const formatData = this.chew.formatResBody(fieldDataList, this.swallow.getApiName())
-    this.vomit.outputResBody(formatData)
+    this.vomit.outputResBody(formatData, this.swallow)
     return this
   }
 
   writeResHeaders() {
     const fieldDataList = this.swallow.getResHeadersFieldDataList()
     const formatData = this.chew.formatResHeaders(fieldDataList, this.swallow.getApiName())
-    this.vomit.outputResHeaders(formatData)
+    this.vomit.outputResHeaders(formatData, this.swallow)
     return this
+  }
+
+  writeAll() {
+    return this
+      .writeReqBody()
+      .writeReqParams()
+      .writeReqQuery()
+      .writeResBody()
+      .writeResHeaders()
   }
 }
