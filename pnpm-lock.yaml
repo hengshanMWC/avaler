@@ -73,14 +73,6 @@ importers:
 
   packages/core: {}
 
-  packages/demo: {}
-
-  packages/ts:
-    devDependencies:
-      avaler-core:
-        specifier: workspace:^
-        version: link:../core
-
 packages:
 
   /@algolia/autocomplete-core@1.7.2:
