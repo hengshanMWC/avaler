@@ -1,6 +1,10 @@
 import type { Chew, FieldData } from 'avaler-core'
 import { capitalizeFirstLetter, getIndentation } from './utils'
 export class ChewTypeScript implements Chew {
+  formatReqForm(list: FieldData[], apiName: string) {
+    return getFormatString(list, `${capitalizeFirstLetter(apiName)}ReqForm`)
+  }
+
   formatReqBody(list: FieldData[], apiName: string) {
     return getFormatString(list, `${capitalizeFirstLetter(apiName)}ReqBody`)
   }
