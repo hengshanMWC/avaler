@@ -1,10 +1,10 @@
 import type { Chew, Swallow, Vomit } from './interface'
 
-export class Avaler<S = any> {
-  swallow: Swallow<S>
+export class Avaler<S = any, T = any> {
+  swallow: Swallow<S, T>
   chew: Chew
   vomit: Vomit
-  constructor(swallow: Swallow<S>, chew: Chew, vomit: Vomit) {
+  constructor(swallow: Swallow<S, T>, chew: Chew, vomit: Vomit) {
     this.swallow = swallow
     this.chew = chew
     this.vomit = vomit

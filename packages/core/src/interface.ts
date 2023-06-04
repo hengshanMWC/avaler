@@ -6,8 +6,8 @@ export interface FieldData {
   children?: FieldData[]
 }
 
-export interface Swallow<T = any> {
-  data: T
+export interface Swallow<T = any, S = any> {
+  data: S
   setData: (data: T) => this
   getApiUrl: () => string
   getApiName: () => string
