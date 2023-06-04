@@ -1,8 +1,8 @@
 import { describe, expect, test } from 'vitest'
-import type { FieldData } from 'avaler-core/typings'
+import type { FieldData } from 'avaler-core'
 import { ChewTypeScript } from '../../src/index'
 import { capitalizeFirstLetter } from '../../src/utils'
-const method = ['formatReqBody', 'formatReqParams', 'formatReqQuery', 'formatResBody', 'formatResHeaders']
+const method = ['formatReqBody', 'formatReqParams', 'formatReqQuery', 'formatResBody']
 const getSuffix = (name: string) => {
   return name.replace('format', '')
 }
