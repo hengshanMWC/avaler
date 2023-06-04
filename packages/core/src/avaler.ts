@@ -1,10 +1,10 @@
 import type { Chew, Swallow, Vomit } from './interface'
 
-export class Avaler<S = any, T = any> {
-  swallow: Swallow<S, T>
+export class Avaler<S = any> {
+  swallow: Swallow<S>
   chew: Chew
   vomit: Vomit
-  constructor(swallow: Swallow<S, T>, chew: Chew, vomit: Vomit) {
+  constructor(swallow: Swallow<S>, chew: Chew, vomit: Vomit) {
     this.swallow = swallow
     this.chew = chew
     this.vomit = vomit
@@ -12,6 +12,13 @@ export class Avaler<S = any, T = any> {
 
   setData(data: S) {
     this.swallow.setData(data)
+    return this
+  }
+
+  writeReqForm() {
+    const fieldDataList = this.swallow.getReqFormFieldDataList()
+    const formatData = this.chew.formatReqForm(fieldDataList, this.swallow.getApiName())
+    this.vomit.outputReqForm(formatData, this.swallow)
     return this
   }
 
@@ -45,6 +52,7 @@ export class Avaler<S = any, T = any> {
 
   writeAll() {
     return this
+      .writeReqForm()
       .writeReqBody()
       .writeReqParams()
       .writeReqQuery()
