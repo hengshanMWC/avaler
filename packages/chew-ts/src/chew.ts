@@ -16,10 +16,6 @@ export class ChewTypeScript implements Chew {
   formatResBody(list: FieldData[], apiName: string) {
     return getFormatString(list, `${capitalizeFirstLetter(apiName)}ResBody`)
   }
-
-  formatResHeaders(list: FieldData[], apiName: string) {
-    return getFormatString(list, `${capitalizeFirstLetter(apiName)}ResHeaders`)
-  }
 }
 
 function getFormatString(list: FieldData[], apiName: string): string {

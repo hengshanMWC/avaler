@@ -43,19 +43,11 @@ export class Avaler<S = any> {
     return this
   }
 
-  writeResHeaders() {
-    const fieldDataList = this.swallow.getResHeadersFieldDataList()
-    const formatData = this.chew.formatResHeaders(fieldDataList, this.swallow.getApiName())
-    this.vomit.outputResHeaders(formatData, this.swallow)
-    return this
-  }
-
   writeAll() {
     return this
       .writeReqBody()
       .writeReqParams()
       .writeReqQuery()
       .writeResBody()
-      .writeResHeaders()
   }
 }

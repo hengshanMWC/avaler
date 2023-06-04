@@ -7,6 +7,7 @@ export interface FieldData {
 }
 
 export interface Swallow<T = any> {
+  data: T
   setData: (data: T) => this
   getApiUrl: () => string
   getApiName: () => string
@@ -17,7 +18,6 @@ export interface Swallow<T = any> {
   getReqQueryFieldDataList: () => FieldData[]
   getReqParamsFieldDataList: () => FieldData[]
   getResBodyFieldDataList: () => FieldData[]
-  getResHeadersFieldDataList: () => FieldData[]
 }
 
 export interface Chew {
@@ -25,7 +25,6 @@ export interface Chew {
   formatReqQuery: (list: FieldData[], apiName: string) => string
   formatReqParams: (list: FieldData[], apiName: string) => string
   formatResBody: (list: FieldData[], apiName: string) => string
-  formatResHeaders: (list: FieldData[], apiName: string) => string
 }
 
 export interface Vomit {
@@ -33,7 +32,6 @@ export interface Vomit {
   outputReqQuery: (data: string, swallow: Swallow) => this
   outputReqParams: (data: string, swallow: Swallow) => this
   outputResBody: (data: string, swallow: Swallow) => this
-  outputResHeaders: (data: string, swallow: Swallow) => this
 }
 
 // export interface DataMap {
